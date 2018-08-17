@@ -19,8 +19,9 @@ class Stock < ApplicationRecord
       end
   end
   
+  # find the stock from the Stock table
   def self.find_by_ticker(ticker_symbol)
-    
+    where(ticker: ticker_symbol).first
   end
   
   
